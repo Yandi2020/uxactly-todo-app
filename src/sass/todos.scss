@@ -1,0 +1,119 @@
+.todos {
+    @include bgPage(190px, 319px, 863px, 520px);
+    background-color: $bg1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-radius: 12px;
+    box-shadow: 3px 3px 20px $blur;
+
+    .lists{
+        grid-column: 1/2;
+        margin: 20px 45px;
+
+        .user{
+            margin: 20px;
+        }
+
+        .names{
+            @include baseFont;
+            opacity: 0.6;
+        }
+
+        .event{
+            display: flex;
+            justify-content: space-between;
+
+            &:hover{
+                text-decoration: underline;
+                font-weight: bold;
+                color: $blue;
+            }
+
+            .sum{
+                display: none;
+            }
+            .sum.active{
+                display: block;
+            }
+        }
+
+        .btn{
+            @include bgPage(460px, 0px, 215px, 63px);
+            @include flexCenter;
+            @include baseFont;
+            background: #E4ECFE 0% 0% no-repeat padding-box;
+            border-radius: 0px 12px 12px 12px;
+            opacity: 0.4;
+        }
+    }
+
+    .content{
+        grid-column: 2/5;
+        background-color: $white;
+        padding: 0px 25px;
+
+        h5{
+            @include baseFont;
+            font-weight: bold;
+            font-size: 33px;
+            line-height: 55px;
+            letter-spacing: 0.17px;
+        }
+
+        .todo{
+            @include flexCenter;
+            justify-content: start;
+
+            img{
+                @include iconSize;
+                margin-right: 15px;
+            }
+
+            .line{
+                @include flexCenter;
+                width: 100%;
+                line-height: 1px;
+                border-bottom: $border;
+                justify-content: space-between;
+                
+                img{
+                    @include iconSize;
+                }
+            }
+        }
+
+        .hint{
+            @include baseFont;
+        }
+
+        form{
+            @include bgPage(460px, 240px, 581px, 28px);
+            display: flex;
+
+            .form-icon{
+                margin-right: 15px;
+            }
+
+            .input{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+               
+                input{
+                    width: 85%;
+                    border: transparent;
+                    outline: none;
+                    border-bottom: $border;
+                }
+            }
+
+            img{
+                @include iconSize;
+            }
+
+            .repeat{
+                margin-right: 15px;
+            }
+        }
+    }
+}

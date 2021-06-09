@@ -1,0 +1,60 @@
+@import './mixins';
+
+.navigation {
+    @include bgPage(50px, 63px, 120px, 32px)
+}
+
+.gear {
+    @include bgPage(55px, 1423px, 22px, 22px)
+}
+
+.diamond {
+    @include bgPage(154px, 383px, 66px, 48px)
+}
+
+.circle {
+    @include bgPage(205px, 1260px, 53px, 53px)
+}
+
+.cross {
+    @include bgPage(744px, 215px, 57px, 57px)
+}
+
+.slash {
+    @include bgPage(801px, 1104px, 57px, 57px)
+}
+
+.drone {
+    @include bgPage(819px, 1340px, 80px, 80px);
+    @include flexCenter;
+    background: transparent linear-gradient(154deg, $blue 0%, $bgSvg1 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 20px 20px 40px $bgSvg2;
+    border-radius: 100%;
+}
+
+.path {
+    @include bgPage(758px, -0.00048828125px, 1500px, 249px)
+}
+
+.logo {
+    @include bgPage(934px, 1326px, 120px, 32px);
+    z-index: 1;
+}
+
+h1{
+    @include bgPage(21px, 622px, 648px, 318px);
+    text-align: right;
+    font: normal normal bold 251px/198px Euclid Flex;
+    letter-spacing: 1.25px;
+    color: $blue;
+    opacity: 0.03;
+    margin-top: 60px;
+}
+
+.footer {
+    @include bgPage(942px, 1084px, 198px, 20px);
+    @include baseFont;
+    color: $white;
+}
+
+

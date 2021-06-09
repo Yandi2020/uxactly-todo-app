@@ -1,0 +1,26 @@
+@mixin bgPage($top, $left, $width, $height){
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin baseFont {
+    text-align: left;
+    font: normal normal normal 16px/31px Euclid Flex;
+    letter-spacing: 0.08px;
+    color: #000031;
+}
+
+@mixin iconSize ($px: 21px) {
+    width: $px;
+    height: $px;
+}
+
